@@ -1,10 +1,10 @@
 {
   "seo": {
     "titulo": "Método Caixa Blindado | Faça sobrar dinheiro na sua loja de materiais de construção",
-    "descricao": "O método que dobrou o caixa de uma loja de 45 anos em 6 meses. 4 regras simples, suas planilhas e a IA vigiando cada real. Peça seu Raio-X de Estoque gratuito."
+    "descricao": "O método que triplicou o caixa de uma loja de 45 anos: estoque menor que gira e a IA projetando as vendas e sugerindo as compras. Peça seu Raio-X de Estoque gratuito."
   },
   "contato": {
-    "whatsapp": "5562999999999",
+    "whatsapp": "13092085805",
     "mensagemWhatsapp": "Olá, Heittor! Sou {nome}, da {loja} ({cidade}). Acabei de me cadastrar para o Raio-X de Estoque gratuito.",
     "instagram": "",
     "email": ""
@@ -13,7 +13,8 @@
     "mostrarDores": true,
     "mostrarPainelExemplo": true,
     "mostrarDepoimentos": false,
-    "mostrarPreco": true
+    "mostrarPreco": false,
+    "mostrarImprensa": true
   },
   "menu": [
     {
@@ -37,10 +38,10 @@
   "hero": {
     "etiqueta": "Para donos de lojas de materiais de construção",
     "titulo": "Sua loja vende. Mas sobra dinheiro no fim do mês?",
-    "subtitulo": "O método que usamos numa loja de 45 anos, depois de uma recuperação judicial, para **dobrar o caixa em 6 meses**: 4 regras simples, suas planilhas de sempre e a inteligência artificial vigiando cada real.",
+    "subtitulo": "O método que usamos numa loja de 45 anos para **triplicar o caixa**: estoque menor, só do que gira, e a inteligência artificial projetando as vendas e sugerindo as compras para nada faltar.",
     "nota": "Você envia 2 relatórios do seu sistema. Em até 48h, recebe quanto dinheiro está parado na sua loja.",
     "videoUrl": "",
-    "videoLegenda": "Heittor Lopes Valadares · 3ª geração da Valadares, desde 1981",
+    "videoLegenda": "Heittor Valadares · 3ª geração da Valadares, desde 1981",
     "numeros": [
       {
         "valor": "45 anos",
@@ -51,12 +52,12 @@
         "texto": "da família no balcão"
       },
       {
-        "valor": "2x o caixa",
-        "texto": "em 6 meses"
+        "valor": "3x o caixa",
+        "texto": "com IA nas compras"
       },
       {
-        "valor": "[−X%]",
-        "texto": "de custo fixo"
+        "valor": "Estoque menor",
+        "texto": "sem faltar produto"
       }
     ]
   },
@@ -81,8 +82,8 @@
         "texto": "Despesa da casa saindo do caixa da empresa. No fim do mês, ninguém sabe o que a loja realmente deu."
       },
       {
-        "titulo": "Custo fixo que só cresce",
-        "texto": "Um sistema aqui, um funcionário ali, uma tarifa nova. Sozinho parece pouco. Somado, come a margem."
+        "titulo": "Falta o que o cliente pede",
+        "texto": "O cliente chega, o item acabou e ele compra no concorrente. Enquanto isso, sobra na prateleira o que não sai."
       }
     ],
     "fechamentoTitulo": "Nós passamos por tudo isso.",
@@ -92,9 +93,9 @@
     "etiqueta": "A história",
     "titulo": "45 anos no mesmo endereço. Uma crise que quase fechou as portas.",
     "paragrafos": [
-      "A Valadares abriu em 1981 em Porangatu, Goiás. Três gerações da família atrás do mesmo balcão, vendendo acabamento para quem constrói a região.",
-      "Passamos por uma recuperação judicial. Foi ali que entendemos: o problema não era vender. Era não enxergar para onde o dinheiro ia. Trocamos o \"achismo\" por 4 regras e colocamos a inteligência artificial para vigiar o caixa todos os dias.",
-      "Resultado: **o caixa dobrou em 6 meses**, a equipe ficou mais enxuta e cada compra passou a ter um limite."
+      "A Valadares nasceu em 1981 em Porangatu, Goiás. Eronildo Valadares, que começou a vida vendendo pão, engraxando sapato e trabalhando em oficina, abriu a loja ao lado do pai, Antônio Rodrigues Valadares, e do irmão, Oneildo Lopes Valadares. Três gerações depois, a família segue atrás do mesmo balcão, vendendo para quem constrói a região.",
+      "No fim de 2024, passamos por uma recuperação judicial. Foi ali que entendemos: o problema não era vender. Era comprar no \"achismo\", com dinheiro parado no que não gira e falta do que o cliente procura.",
+      "Resultado: **triplicamos o caixa**. Não foi cortando custo fixo: foi otimizando as compras. Hoje o estoque é menor, mas gira. A IA projeta a venda média de cada produto e sugere o que comprar e o que não comprar, para nada faltar na prateleira."
     ],
     "fotos": [
       {
@@ -102,8 +103,8 @@
         "descricao": "Foto da fachada da loja hoje"
       },
       {
-        "arquivo": "",
-        "descricao": "Foto histórica — anos 1980"
+        "arquivo": "fachada-irmaos-valadares.webp",
+        "descricao": "Fachada antiga da loja, ainda como Irmãos Valadares"
       },
       {
         "arquivo": "",
@@ -113,19 +114,19 @@
     "linhaDoTempo": [
       {
         "ano": "1981",
-        "texto": "[Nome do fundador] abre a Valadares em Porangatu."
+        "texto": "Eronildo Valadares, o pai Antônio e o irmão Oneildo abrem a Valadares em Porangatu."
       },
       {
-        "ano": "[ano]",
-        "texto": "A 2ª geração assume e a loja se especializa em acabamento."
+        "ano": "1993",
+        "texto": "Eronildo assume a presidência da Associação Comercial de Porangatu (ACIAP)."
       },
       {
-        "ano": "[ano]",
-        "texto": "A crise: pedido de recuperação judicial."
+        "ano": "2024",
+        "texto": "Fim do ano: a loja entra em recuperação judicial."
       },
       {
         "ano": "2026",
-        "texto": "IA na gestão. Caixa dobra em 6 meses. Nasce o Caixa Blindado."
+        "texto": "A IA passa a projetar as vendas e sugerir as compras. O caixa triplica. Nasce o Caixa Blindado."
       }
     ]
   },
@@ -231,14 +232,14 @@
     },
     "plano": {
       "etiqueta": "Depois do diagnóstico",
-      "titulo": "Caixa Blindado Anual",
-      "texto": "Implantação do método na sua loja e acompanhamento por 12 meses.",
+      "titulo": "IA operando no seu negócio",
+      "texto": "Mostramos como colocar a inteligência artificial para trabalhar na loja que você já tem, do jeito que fazemos na Valadares. Sem trocar de sistema.",
       "itens": [
-        "Onboarding individual nos primeiros 30 dias",
-        "Agente de Estoque e Agente Financeiro prontos",
-        "Modelos das 5 planilhas no seu Google Drive",
-        "Encontro semanal ao vivo em grupo",
-        "Comunidade fechada de lojistas"
+        "Estoque menor e menos dinheiro parado na prateleira",
+        "Compra mais do que gira, estoque mínimo do que gira pouco",
+        "A IA projeta a venda média de cada produto e sugere as compras",
+        "Nada falta na prateleira: reposição na hora certa",
+        "Na Valadares, foi assim que triplicamos o caixa"
       ],
       "preco": "12x R$ 500",
       "precoNota": "Apresentado na conversa do diagnóstico"
@@ -272,13 +273,82 @@
   },
   "sobre": {
     "etiqueta": "Quem ensina",
-    "nome": "Heittor Lopes Valadares",
+    "nome": "Heittor Valadares",
     "foto": "",
     "paragrafos": [
       "Lojista, 3ª geração da Valadares. Não sou consultor que nunca abriu uma loja: aplico cada regra deste método no meu próprio caixa, todos os dias, antes de ensinar.",
-      "[Complementar: formação, empresas do grupo, experiência com varejo e agronegócio.]"
+      "Filho de Eronildo Valadares, cresci dentro da loja da família. Além do varejo, atuo no agronegócio do Grupo Valadares."
+    ],
+    "formacaoTitulo": "Formação e reconhecimento",
+    "formacao": [
+      {
+        "ano": "2021–2025",
+        "texto": "Bacharelado em Administração · Faculdade Apogeu"
+      },
+      {
+        "ano": "2023",
+        "texto": "Master em Business Entrepreneurship · LINK School of Business, São Paulo"
+      },
+      {
+        "ano": "2026",
+        "texto": "Certificado em Data Science · UCLA Extension"
+      },
+      {
+        "ano": "2026",
+        "texto": "Medalha Ângelo Rosa de Moura, maior honraria da Câmara de Porangatu. O mais jovem a recebê-la"
+      }
     ],
     "botao": "Falar comigo"
+  },
+  "imprensa": {
+    "etiqueta": "Na imprensa",
+    "titulo": "Quem já falou sobre o nosso trabalho",
+    "botao": "Ler a matéria original",
+    "itens": [
+      {
+        "veiculo": "UOL",
+        "editoria": "Cena Pop",
+        "site": "uol.com.br",
+        "titulo": "Heittor Valadares transforma o Grupo Valadares em referência de gestão sustentável",
+        "link": "https://cenapop.uol.com.br/noticias/mundo-pop/heittor-valadares-transforma-o-grupo-valadares-em-referencia-de-gestao-sustentavel.html"
+      },
+      {
+        "veiculo": "R7",
+        "editoria": "Empreender na Prática",
+        "site": "r7.com",
+        "titulo": "Heittor Valadares lidera expansão do Grupo Valadares com tecnologia de precisão no agronegócio",
+        "link": "https://lorena.r7.com/categoria/empreender-na-pratica/heittor-valadares-expansao-bilionaria-revolucao-agronegocio-brasileiro"
+      },
+      {
+        "veiculo": "iG",
+        "editoria": "In Magazine",
+        "site": "ig.com.br",
+        "titulo": "Heittor Valadares conduz o Grupo Valadares em nova fase de expansão no agronegócio",
+        "link": "https://inmagazine.ig.com.br/empreendedorismo/heittor-valadares-grupo-valadares-agronegocio"
+      },
+      {
+        "veiculo": "Câmara de Porangatu",
+        "editoria": "Portal oficial",
+        "site": "camaraporangatu.go.gov.br",
+        "titulo": "Câmara concede Medalha Ângelo Rosa de Moura ao jovem empresário Heittor Lopes Valadares",
+        "link": "https://camaraporangatu.go.gov.br/camara-municipal-de-porangatu-concede-medalha-angelo-rosa-de-moura-ao-jovem-empresario-heittor-lopes-valadares/"
+      },
+      {
+        "veiculo": "Portal Norte Goiás",
+        "editoria": "Jornalismo regional",
+        "site": "portalnortegoias.com.br",
+        "titulo": "Jovem empresário de Porangatu recebe Medalha Ângelo Rosa de Moura em sessão solene na Câmara",
+        "link": "https://portalnortegoias.com.br/jovem-empresario-de-porangatu-recebe-medalha-angelo-rosa-de-moura/"
+      },
+      {
+        "veiculo": "Câmara de Porangatu",
+        "editoria": "Portal oficial",
+        "site": "camaraporangatu.go.gov.br",
+        "titulo": "A saga empreendedora de Eronildo Valadares em Porangatu",
+        "link": "https://camaraporangatu.go.gov.br/a-saga-empreendedora-de-eronildo-valadares-em-porangatu/"
+      }
+    ],
+    "subtitulo": "Matérias publicadas por veículos independentes. Os links abrem no site original."
   },
   "formulario": {
     "etiqueta": "Raio-X gratuito",
@@ -312,7 +382,7 @@
       },
       {
         "pergunta": "Não entendo nada de IA. Consigo usar?",
-        "resposta": "Sim. Você escreve \"fechamento de hoje\" e recebe o painel. A configuração é feita junto com você no onboarding."
+        "resposta": "Sim. Você escreve \"fechamento de hoje\" e recebe o painel. A configuração é feita junto com você."
       },
       {
         "pergunta": "Serve para loja pequena?",
@@ -324,7 +394,7 @@
       },
       {
         "pergunta": "O diagnóstico é gratuito mesmo?",
-        "resposta": "Sim. Se fizer sentido para você, apresentamos o plano anual na conversa. Se não, o Raio-X é seu."
+        "resposta": "Sim. Na conversa, mostramos como a IA pode operar no seu negócio. Se fizer sentido, seguimos juntos. Se não, o Raio-X é seu."
       }
     ]
   },
@@ -337,6 +407,6 @@
     "botao": "Abrir o WhatsApp"
   },
   "rodape": {
-    "copyright": "© 2026 Método Caixa Blindado"
+    "copyright": "© 2026 Método Caixa Blindado · MLV Serviços Administrativos Ltda · CNPJ 61.862.214/0001-61"
   }
 }

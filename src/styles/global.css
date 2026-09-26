@@ -179,6 +179,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 /* Sobre */
 .about-grid { display: grid; gap: 22px; align-items: center; }
 .about-photo { aspect-ratio: 4 / 5; border-radius: 16px; width: 100%; object-fit: cover; }
+.formacao { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.formacao li { display: flex; gap: 14px; font-size: 15px; line-height: 1.5; color: var(--muted-dark); }
+.formacao-ano { flex: 0 0 96px; font-weight: 700; color: var(--gold); }
+.press { text-decoration: none; color: inherit; transition: border-color .2s; }
+.press:hover { border-color: var(--gold); }
+.press-outlet { font-family: var(--font-display); font-size: 30px; font-weight: 700; line-height: 1.1; color: var(--ink); }
+.press-meta { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding-bottom: 12px; border-bottom: 1px solid var(--line-light); }
+.card .press-title { font-size: 15px; font-style: italic; line-height: 1.5; color: var(--muted); padding-top: 4px; }
+.press-link { margin-top: auto; padding-top: 8px; font-size: 14px; font-weight: 700; color: var(--gold-text); }
 
 /* Formulário */
 .form-grid { display: grid; gap: 22px; }
