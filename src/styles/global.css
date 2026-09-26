@@ -184,6 +184,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .formacao-ano { flex: 0 0 96px; font-weight: 700; color: var(--gold); }
 .press { text-decoration: none; color: inherit; transition: border-color .2s; }
 .press:hover { border-color: var(--gold); }
+.press-outlet { font-family: var(--font-display); font-size: 30px; font-weight: 700; line-height: 1.1; color: var(--ink); }
+.press-meta { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding-bottom: 12px; border-bottom: 1px solid var(--line-light); }
+.card .press-title { font-size: 15px; font-style: italic; line-height: 1.5; color: var(--muted); padding-top: 4px; }
 .press-link { margin-top: auto; padding-top: 8px; font-size: 14px; font-weight: 700; color: var(--gold-text); }
 
 /* Formulário */

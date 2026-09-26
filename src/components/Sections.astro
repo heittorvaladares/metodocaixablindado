@@ -176,13 +176,15 @@ const pad = (n: number) => String(n + 1).padStart(2, "0");
     <div class="stack" style="gap:14px;max-width:760px">
       <p class="eyebrow">{imprensa.etiqueta}</p>
       <h2 class="h2">{imprensa.titulo}</h2>
+      <p class="lead">{imprensa.subtitulo}</p>
     </div>
     <div class="cards">
       {imprensa.itens.map((m) => (
-        <a class="card press" href={m.link} target="_blank" rel="noopener">
-          <span class="eyebrow" style="color:var(--muted)">{m.veiculo}</span>
-          <h3>{m.titulo}</h3>
-          <span class="press-link">{imprensa.botao} →</span>
+        <a class="card press" href={m.link} target="_blank" rel="noopener" aria-label={`${imprensa.botao}: ${m.veiculo}, ${m.titulo}`}>
+          <span class="press-outlet">{m.veiculo}</span>
+          <span class="press-meta">{m.site} · {m.editoria}</span>
+          <p class="press-title">{m.titulo}</p>
+          <span class="press-link">{imprensa.botao} ↗</span>
         </a>
       ))}
     </div>
