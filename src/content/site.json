@@ -294,26 +294,41 @@
         "texto": "Certificado em Data Science · UCLA Extension"
       },
       {
-        "ano": "Homenagem",
-        "texto": "Medalha Ângelo Rosa de Moura · Câmara Municipal de Porangatu"
+        "ano": "2026",
+        "texto": "Medalha Ângelo Rosa de Moura, maior honraria da Câmara de Porangatu. O mais jovem a recebê-la"
       }
     ],
     "botao": "Falar comigo"
   },
   "imprensa": {
     "etiqueta": "Na imprensa",
-    "titulo": "O que já saiu sobre a família e o trabalho",
+    "titulo": "O que a imprensa já publicou",
     "botao": "Ler matéria",
     "itens": [
+      {
+        "veiculo": "UOL · Cena Pop",
+        "titulo": "Heittor Valadares transforma o Grupo Valadares em referência de gestão sustentável",
+        "link": "https://cenapop.uol.com.br/noticias/mundo-pop/heittor-valadares-transforma-o-grupo-valadares-em-referencia-de-gestao-sustentavel.html"
+      },
+      {
+        "veiculo": "R7 · Empreender na Prática",
+        "titulo": "Heittor Valadares lidera expansão do Grupo Valadares com tecnologia de precisão no agronegócio",
+        "link": "https://lorena.r7.com/categoria/empreender-na-pratica/heittor-valadares-expansao-bilionaria-revolucao-agronegocio-brasileiro"
+      },
+      {
+        "veiculo": "iG · In Magazine",
+        "titulo": "Heittor Valadares conduz o Grupo Valadares em nova fase de expansão no agronegócio",
+        "link": "https://inmagazine.ig.com.br/empreendedorismo/heittor-valadares-grupo-valadares-agronegocio"
+      },
       {
         "veiculo": "Câmara Municipal de Porangatu",
         "titulo": "Câmara concede Medalha Ângelo Rosa de Moura ao jovem empresário Heittor Lopes Valadares",
         "link": "https://camaraporangatu.go.gov.br/camara-municipal-de-porangatu-concede-medalha-angelo-rosa-de-moura-ao-jovem-empresario-heittor-lopes-valadares/"
       },
       {
-        "veiculo": "33Giga",
-        "titulo": "Heittor Valadares impulsiona um novo ciclo de crescimento e sustentabilidade no agronegócio brasileiro",
-        "link": "https://33giga.com.br/heittor-valadares"
+        "veiculo": "Portal Norte Goiás",
+        "titulo": "Jovem empresário de Porangatu recebe Medalha Ângelo Rosa de Moura em sessão solene na Câmara",
+        "link": "https://portalnortegoias.com.br/jovem-empresario-de-porangatu-recebe-medalha-angelo-rosa-de-moura/"
       },
       {
         "veiculo": "Câmara Municipal de Porangatu",
