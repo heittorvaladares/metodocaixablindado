@@ -1,7 +1,7 @@
 {
   "seo": {
     "titulo": "Método Caixa Blindado | Faça sobrar dinheiro na sua loja de materiais de construção",
-    "descricao": "O método que triplicou o caixa de uma loja de 45 anos: estoque menor, compra só do que gira e a IA decidindo o que repor. Peça seu Raio-X de Estoque gratuito."
+    "descricao": "O método que triplicou o caixa de uma loja de 45 anos: estoque menor que gira e a IA projetando as vendas e sugerindo as compras. Peça seu Raio-X de Estoque gratuito."
   },
   "contato": {
     "whatsapp": "13092085805",
@@ -38,7 +38,7 @@
   "hero": {
     "etiqueta": "Para donos de lojas de materiais de construção",
     "titulo": "Sua loja vende. Mas sobra dinheiro no fim do mês?",
-    "subtitulo": "O método que usamos numa loja de 45 anos, depois de uma recuperação judicial, para **triplicar o caixa**: estoque menor, compra só do que gira e a inteligência artificial decidindo o que repor, pelo histórico de vendas.",
+    "subtitulo": "O método que usamos numa loja de 45 anos para **triplicar o caixa**: estoque menor, só do que gira, e a inteligência artificial projetando as vendas e sugerindo as compras para nada faltar.",
     "nota": "Você envia 2 relatórios do seu sistema. Em até 48h, recebe quanto dinheiro está parado na sua loja.",
     "videoUrl": "",
     "videoLegenda": "Heittor Valadares · 3ª geração da Valadares, desde 1981",
@@ -56,8 +56,8 @@
         "texto": "com IA nas compras"
       },
       {
-        "valor": "[−X%]",
-        "texto": "de custo fixo"
+        "valor": "Estoque menor",
+        "texto": "sem faltar produto"
       }
     ]
   },
@@ -82,8 +82,8 @@
         "texto": "Despesa da casa saindo do caixa da empresa. No fim do mês, ninguém sabe o que a loja realmente deu."
       },
       {
-        "titulo": "Custo fixo que só cresce",
-        "texto": "Um sistema aqui, um funcionário ali, uma tarifa nova. Sozinho parece pouco. Somado, come a margem."
+        "titulo": "Falta o que o cliente pede",
+        "texto": "O cliente chega, o item acabou e ele compra no concorrente. Enquanto isso, sobra na prateleira o que não sai."
       }
     ],
     "fechamentoTitulo": "Nós passamos por tudo isso.",
@@ -94,8 +94,8 @@
     "titulo": "45 anos no mesmo endereço. Uma crise que quase fechou as portas.",
     "paragrafos": [
       "A Valadares nasceu em 1981 em Porangatu, Goiás. Eronildo Valadares, que começou a vida vendendo pão, engraxando sapato e trabalhando em oficina, abriu a loja ao lado do pai, Antônio Rodrigues Valadares, e do irmão, Oneildo Lopes Valadares. Três gerações depois, a família segue atrás do mesmo balcão, vendendo para quem constrói a região.",
-      "Passamos por uma recuperação judicial. Foi ali que entendemos: o problema não era vender. Era não enxergar para onde o dinheiro ia. Trocamos o \"achismo\" por 4 regras e colocamos a inteligência artificial para vigiar o caixa todos os dias.",
-      "Resultado: **triplicamos o caixa**. Reduzimos o estoque, passamos a comprar mais do que gira e a estocar menos do que gira pouco. Hoje a IA decide o que devemos ou não comprar, de acordo com o histórico de vendas e a necessidade de reposição."
+      "No fim de 2024, passamos por uma recuperação judicial. Foi ali que entendemos: o problema não era vender. Era comprar no \"achismo\", com dinheiro parado no que não gira e falta do que o cliente procura.",
+      "Resultado: **triplicamos o caixa**. Não foi cortando custo fixo: foi otimizando as compras. Hoje o estoque é menor, mas gira. A IA projeta a venda média de cada produto e sugere o que comprar e o que não comprar, para nada faltar na prateleira."
     ],
     "fotos": [
       {
@@ -121,12 +121,12 @@
         "texto": "Eronildo assume a presidência da Associação Comercial de Porangatu (ACIAP)."
       },
       {
-        "ano": "[ano]",
-        "texto": "A crise: pedido de recuperação judicial."
+        "ano": "2024",
+        "texto": "Fim do ano: a loja entra em recuperação judicial."
       },
       {
         "ano": "2026",
-        "texto": "A IA passa a decidir as compras. O caixa triplica. Nasce o Caixa Blindado."
+        "texto": "A IA passa a projetar as vendas e sugerir as compras. O caixa triplica. Nasce o Caixa Blindado."
       }
     ]
   },
@@ -237,8 +237,8 @@
       "itens": [
         "Estoque menor e menos dinheiro parado na prateleira",
         "Compra mais do que gira, estoque mínimo do que gira pouco",
-        "A IA diz o que comprar e o que não comprar, pelo histórico de vendas",
-        "Reposição calculada pela necessidade real de cada produto",
+        "A IA projeta a venda média de cada produto e sugere as compras",
+        "Nada falta na prateleira: reposição na hora certa",
         "Na Valadares, foi assim que triplicamos o caixa"
       ],
       "preco": "12x R$ 500",
