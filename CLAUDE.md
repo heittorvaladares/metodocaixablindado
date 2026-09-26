@@ -21,6 +21,7 @@ Landing page do **Método Caixa Blindado**, de Heittor Lopes Valadares. O dono n
 | Qualquer texto, número, pergunta frequente, preço, links, vídeo, WhatsApp e mensagem do WhatsApp | `src/content/site.json` |
 | Mostrar/ocultar seções (`mostrarDores`, `mostrarPainelExemplo`, `mostrarDepoimentos`, `mostrarPreco`) | `secoes` em `src/content/site.json` |
 | Negrito em um texto | use `**assim**` dentro do texto no `site.json` (funciona no subtítulo do topo, na história e no "sobre") |
+| Formação (no "Quem ensina") e matérias da imprensa (`mostrarImprensa`) | `sobre.formacao` e `imprensa.itens` em `src/content/site.json` |
 | Fotos | coloque o arquivo em `public/images/` (WebP ou JPG, até ~300 KB) e escreva o nome do arquivo no campo `arquivo`/`foto` correspondente no `site.json`. Campo vazio = aparece o espaço reservado |
 | Vídeo do topo | cole o link do YouTube em `hero.videoUrl` |
 | Cores e fontes | `src/styles/tokens.css` |

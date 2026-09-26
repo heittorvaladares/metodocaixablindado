@@ -3,7 +3,7 @@
 import site from "../content/site.json";
 import { rich } from "../lib/util";
 import Media from "./Media.astro";
-const { dores, historia, metodo, ia, oferta, depoimentos, sobre, secoes } = site;
+const { dores, historia, metodo, ia, oferta, depoimentos, sobre, imprensa, secoes } = site;
 const pad = (n: number) => String(n + 1).padStart(2, "0");
 ---
 
@@ -157,7 +157,35 @@ const pad = (n: number) => String(n + 1).padStart(2, "0");
       <p class="eyebrow">{sobre.etiqueta}</p>
       <h2 class="h2">{sobre.nome}</h2>
       {sobre.paragrafos.map((p) => <p class="lead" set:html={rich(p)} />)}
+      {sobre.formacao.length > 0 && (
+        <div class="stack" style="gap:10px">
+          <p class="eyebrow">{sobre.formacaoTitulo}</p>
+          <ul class="formacao">
+            {sobre.formacao.map((f) => <li><span class="formacao-ano">{f.ano}</span><span>{f.texto}</span></li>)}
+          </ul>
+        </div>
+      )}
       <a href="#formulario" class="btn btn-gold" style="align-self:flex-start">{sobre.botao}</a>
     </div>
   </div>
 </section>
+
+{secoes.mostrarImprensa && imprensa.itens.length > 0 && (
+<section id="imprensa" class="section paper">
+  <div class="container stack" style="gap:28px">
+    <div class="stack" style="gap:14px;max-width:760px">
+      <p class="eyebrow">{imprensa.etiqueta}</p>
+      <h2 class="h2">{imprensa.titulo}</h2>
+    </div>
+    <div class="cards">
+      {imprensa.itens.map((m) => (
+        <a class="card press" href={m.link} target="_blank" rel="noopener">
+          <span class="eyebrow" style="color:var(--muted)">{m.veiculo}</span>
+          <h3>{m.titulo}</h3>
+          <span class="press-link">{imprensa.botao} →</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+)}
