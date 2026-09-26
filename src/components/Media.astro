@@ -1,0 +1,10 @@
+---
+// Mostra a foto se houver arquivo em public/images; senão, um espaço reservado.
+import { img } from "../lib/util";
+interface Props { arquivo: string; descricao: string; class?: string }
+const { arquivo, descricao, class: cls = "" } = Astro.props;
+const src = img(arquivo);
+---
+{src
+  ? <img src={src} alt={descricao} class={cls} loading="lazy" decoding="async" />
+  : <div class={`ph ${cls}`} role="img" aria-label={`Espaço para foto: ${descricao}`}>[{descricao}]</div>}

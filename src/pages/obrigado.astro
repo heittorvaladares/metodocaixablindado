@@ -1,0 +1,43 @@
+---
+import Base from "../layouts/Base.astro";
+import Shield from "../components/Shield.astro";
+import site from "../content/site.json";
+const o = site.obrigado;
+const { whatsapp, mensagemWhatsapp } = site.contato;
+---
+<Base title="Cadastro recebido | Método Caixa Blindado" noindex>
+  <div class="simple dark">
+    <main class="container" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:22px;min-height:100vh;padding-top:40px;padding-bottom:40px">
+      <Shield size={52} />
+      <h1 style="font-size:34px">{o.titulo}</h1>
+      <p class="lead" id="obg-text">{o.texto}</p>
+      <a class="btn btn-gold" id="wa-btn" href={`https://wa.me/${whatsapp}`} data-num={whatsapp} data-msg={mensagemWhatsapp}>{o.botao}</a>
+    </main>
+  </div>
+</Base>
+
+<script>
+  const btn = document.getElementById("wa-btn") as HTMLAnchorElement;
+  let lead: any = null;
+  try { lead = JSON.parse(sessionStorage.getItem("cb_lead") || "null"); } catch {}
+
+  const msg = (btn.dataset.msg || "")
+    .replace("{nome}", lead?.nome || "")
+    .replace("{loja}", lead?.loja || "minha loja")
+    .replace("{cidade}", lead?.cidade || "");
+  const url = `https://wa.me/${btn.dataset.num}?text=${encodeURIComponent(msg.replace(/\s+\(\)/, ""))}`;
+  btn.href = url;
+  btn.addEventListener("click", () => (window as any).cbTrack?.(null, "click_whatsapp"));
+
+  // Conta o Lead só uma vez, quando a pessoa chega do formulário.
+  function trackLead() {
+    if (!lead || lead.tracked) return;
+    (window as any).cbTrack?.("Lead", "generate_lead", {}, lead.eventId);
+    lead.tracked = true;
+    try { sessionStorage.setItem("cb_lead", JSON.stringify(lead)); } catch {}
+  }
+  trackLead();
+  document.addEventListener("cb:tracking-ready", trackLead);
+
+  if (lead) setTimeout(() => { location.href = url; }, 1500);
+</script>

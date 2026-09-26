@@ -1,0 +1,163 @@
+---
+// Seções do meio da página: dores, história, método, IA, oferta, depoimentos, sobre.
+import site from "../content/site.json";
+import { rich } from "../lib/util";
+import Media from "./Media.astro";
+const { dores, historia, metodo, ia, oferta, depoimentos, sobre, secoes } = site;
+const pad = (n: number) => String(n + 1).padStart(2, "0");
+---
+
+{secoes.mostrarDores && (
+<section class="section paper">
+  <div class="container stack" style="gap:28px">
+    <div class="stack" style="gap:14px;max-width:760px">
+      <p class="eyebrow">{dores.etiqueta}</p>
+      <h2 class="h2">{dores.titulo}</h2>
+    </div>
+    <div class="cards">
+      {dores.itens.map((d) => (
+        <div class="card"><h3>{d.titulo}</h3><p>{d.texto}</p></div>
+      ))}
+      <div class="card card-dark"><h3>{dores.fechamentoTitulo}</h3><p>{dores.fechamentoTexto}</p></div>
+    </div>
+  </div>
+</section>
+)}
+
+<section id="historia" class="section sand">
+  <div class="container hist-grid">
+    <div class="stack">
+      <img src="/images/valadares-logo.webp" alt="Valadares, desde 1981" class="valadares-logo" width="260" height="58" loading="lazy" />
+      <p class="eyebrow">{historia.etiqueta}</p>
+      <h2 class="h2">{historia.titulo}</h2>
+      {historia.paragrafos.map((p) => <p class="lead" set:html={rich(p)} />)}
+    </div>
+    <div class="hist-photos">
+      {historia.fotos.map((f) => <Media arquivo={f.arquivo} descricao={f.descricao} />)}
+    </div>
+    <div class="timeline">
+      {historia.linhaDoTempo.map((t) => (
+        <div class="timeline-item"><span class="timeline-year">{t.ano}</span><p>{t.texto}</p></div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section id="metodo" class="section dark">
+  <div class="container stack" style="gap:28px">
+    <div class="stack" style="gap:14px;max-width:780px">
+      <p class="eyebrow">{metodo.etiqueta}</p>
+      <h2 class="h2">{metodo.titulo}</h2>
+      <p class="lead">{metodo.subtitulo}</p>
+    </div>
+    <div class="rules">
+      {metodo.regras.map((r, i) => (
+        <div class="rule"><span class="rule-n">{pad(i)}</span><div class="rule-body"><h3>{r.titulo}</h3><p>{r.texto}</p></div></div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section id="ia" class="section paper">
+  <div class="container ia-grid">
+    <div class="stack" style="gap:24px">
+      <p class="eyebrow">{ia.etiqueta}</p>
+      <h2 class="h2">{ia.titulo}</h2>
+      <div class="steps">
+        {ia.passos.map((p, i) => (
+          <div class="step"><span class="step-n">{i + 1}</span><div><h3>{p.titulo}</h3><p>{p.texto}</p></div></div>
+        ))}
+      </div>
+    </div>
+    {secoes.mostrarPainelExemplo && (
+      <div class="panel">
+        <div class="panel-head"><span class="panel-title">{ia.painel.titulo}</span><span class="panel-note">{ia.painel.aviso}</span></div>
+        <div>
+          {ia.painel.linhas.map((l) => (
+            <div class="panel-row"><span>{l.rotulo}</span><span class="panel-val">{l.valor}{l.sinal && <span class={`dot dot-${l.sinal}`} aria-hidden="true"></span>}</span></div>
+          ))}
+        </div>
+        <div class="panel-actions">
+          <span class="panel-title">{ia.painel.acoesTitulo}</span>
+          {ia.painel.acoes.map((a, i) => <p>{i + 1}. {a}</p>)}
+        </div>
+        <p class="panel-foot">{ia.painel.rodape}</p>
+      </div>
+    )}
+  </div>
+</section>
+
+<section id="diagnostico" class="section sand">
+  <div class="container stack" style="gap:28px">
+    <div class="stack" style="gap:14px;max-width:780px">
+      <p class="eyebrow">{oferta.etiqueta}</p>
+      <h2 class="h2">{oferta.titulo}</h2>
+    </div>
+    <div class="offer-grid">
+      <div class="offer-card">
+        <div class="offer-head"><h3>{oferta.raioX.titulo}</h3><span class="badge">{oferta.raioX.selo}</span></div>
+        <div class="offer-cols">
+          <div class="offer-col">
+            <h4>{oferta.raioX.enviaTitulo}</h4>
+            <ul class="check">{oferta.raioX.envia.map((x) => <li>{x}</li>)}</ul>
+            <p class="muted" style="font-size:14px">{oferta.raioX.enviaNota}</p>
+          </div>
+          <div class="offer-col">
+            <h4>{oferta.raioX.recebeTitulo}</h4>
+            <ul class="check">{oferta.raioX.recebe.map((x) => <li>{x}</li>)}</ul>
+          </div>
+        </div>
+        <a href="#formulario" class="btn btn-ink">{oferta.raioX.botao}</a>
+      </div>
+      <div class="plan dark">
+        <p class="eyebrow">{oferta.plano.etiqueta}</p>
+        <h3>{oferta.plano.titulo}</h3>
+        <p class="lead" style="font-size:16px">{oferta.plano.texto}</p>
+        <ul class="check">{oferta.plano.itens.map((x) => <li>{x}</li>)}</ul>
+        {secoes.mostrarPreco && (
+          <div class="plan-price"><strong>{oferta.plano.preco}</strong><span>{oferta.plano.precoNota}</span></div>
+        )}
+      </div>
+    </div>
+  </div>
+</section>
+
+{secoes.mostrarDepoimentos && (
+<section class="section paper">
+  <div class="container stack" style="gap:28px">
+    <div class="stack" style="gap:14px">
+      <p class="eyebrow">{depoimentos.etiqueta}</p>
+      <h2 class="h2">{depoimentos.titulo}</h2>
+    </div>
+    <div class="testis">
+      {depoimentos.itens.map((d) => (
+        <figure class="card testi" style="margin:0;gap:16px">
+          <blockquote style="margin:0"><p>{d.texto}</p></blockquote>
+          <figcaption class="person">
+            {d.foto ? <img class="avatar" src={`/images/${d.foto}`} alt="" /> : <span class="avatar" aria-hidden="true"></span>}
+            <span style="display:flex;flex-direction:column"><strong style="font-size:14px">{d.nome}</strong><span class="muted" style="font-size:13px">{d.loja}</span></span>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+    {depoimentos.midiaLogos.length > 0 && (
+      <div class="stack" style="gap:14px">
+        <p class="eyebrow" style="color:var(--muted)">{depoimentos.midiaTitulo}</p>
+        <div class="logos">{depoimentos.midiaLogos.map((l: any) => <img src={`/images/${l.arquivo}`} alt={l.nome} style="height:56px;object-fit:contain" />)}</div>
+      </div>
+    )}
+  </div>
+</section>
+)}
+
+<section class="section dark">
+  <div class="container about-grid">
+    <Media arquivo={sobre.foto} descricao="Foto profissional do Heittor" class="about-photo" />
+    <div class="stack">
+      <p class="eyebrow">{sobre.etiqueta}</p>
+      <h2 class="h2">{sobre.nome}</h2>
+      {sobre.paragrafos.map((p) => <p class="lead" set:html={rich(p)} />)}
+      <a href="#formulario" class="btn btn-gold" style="align-self:flex-start">{sobre.botao}</a>
+    </div>
+  </div>
+</section>

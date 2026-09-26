@@ -1,0 +1,342 @@
+{
+  "seo": {
+    "titulo": "Método Caixa Blindado | Faça sobrar dinheiro na sua loja de materiais de construção",
+    "descricao": "O método que dobrou o caixa de uma loja de 45 anos em 6 meses. 4 regras simples, suas planilhas e a IA vigiando cada real. Peça seu Raio-X de Estoque gratuito."
+  },
+  "contato": {
+    "whatsapp": "5562999999999",
+    "mensagemWhatsapp": "Olá, Heittor! Sou {nome}, da {loja} ({cidade}). Acabei de me cadastrar para o Raio-X de Estoque gratuito.",
+    "instagram": "",
+    "email": ""
+  },
+  "secoes": {
+    "mostrarDores": true,
+    "mostrarPainelExemplo": true,
+    "mostrarDepoimentos": false,
+    "mostrarPreco": true
+  },
+  "menu": [
+    {
+      "texto": "A história",
+      "link": "#historia"
+    },
+    {
+      "texto": "O método",
+      "link": "#metodo"
+    },
+    {
+      "texto": "Como a IA ajuda",
+      "link": "#ia"
+    },
+    {
+      "texto": "Dúvidas",
+      "link": "#duvidas"
+    }
+  ],
+  "botaoPrincipal": "Quero meu diagnóstico gratuito",
+  "hero": {
+    "etiqueta": "Para donos de lojas de materiais de construção",
+    "titulo": "Sua loja vende. Mas sobra dinheiro no fim do mês?",
+    "subtitulo": "O método que usamos numa loja de 45 anos, depois de uma recuperação judicial, para **dobrar o caixa em 6 meses**: 4 regras simples, suas planilhas de sempre e a inteligência artificial vigiando cada real.",
+    "nota": "Você envia 2 relatórios do seu sistema. Em até 48h, recebe quanto dinheiro está parado na sua loja.",
+    "videoUrl": "",
+    "videoLegenda": "Heittor Lopes Valadares · 3ª geração da Valadares, desde 1981",
+    "numeros": [
+      {
+        "valor": "45 anos",
+        "texto": "no mesmo endereço"
+      },
+      {
+        "valor": "3ª geração",
+        "texto": "da família no balcão"
+      },
+      {
+        "valor": "2x o caixa",
+        "texto": "em 6 meses"
+      },
+      {
+        "valor": "[−X%]",
+        "texto": "de custo fixo"
+      }
+    ]
+  },
+  "dores": {
+    "etiqueta": "Você reconhece isso?",
+    "titulo": "A loja fatura bem, o estoque está cheio e, mesmo assim, o caixa aperta todo mês.",
+    "itens": [
+      {
+        "titulo": "Dinheiro virou piso parado",
+        "texto": "Porcelanato de coleção antiga, ponta de lote, linha descontinuada. Está no balanço, mas não paga boleto."
+      },
+      {
+        "titulo": "Compra pelo representante",
+        "texto": "A condição \"imperdível\" chega, o pedido sai, e as parcelas caem justo na semana mais apertada."
+      },
+      {
+        "titulo": "Fiado que não volta",
+        "texto": "Cliente com título vencido há 90 dias que continua comprando a prazo. Ninguém cobra com método."
+      },
+      {
+        "titulo": "Conta da loja misturada",
+        "texto": "Despesa da casa saindo do caixa da empresa. No fim do mês, ninguém sabe o que a loja realmente deu."
+      },
+      {
+        "titulo": "Custo fixo que só cresce",
+        "texto": "Um sistema aqui, um funcionário ali, uma tarifa nova. Sozinho parece pouco. Somado, come a margem."
+      }
+    ],
+    "fechamentoTitulo": "Nós passamos por tudo isso.",
+    "fechamentoTexto": "E quase custou a loja da família. O método nasceu dessa virada."
+  },
+  "historia": {
+    "etiqueta": "A história",
+    "titulo": "45 anos no mesmo endereço. Uma crise que quase fechou as portas.",
+    "paragrafos": [
+      "A Valadares abriu em 1981 em Porangatu, Goiás. Três gerações da família atrás do mesmo balcão, vendendo acabamento para quem constrói a região.",
+      "Passamos por uma recuperação judicial. Foi ali que entendemos: o problema não era vender. Era não enxergar para onde o dinheiro ia. Trocamos o \"achismo\" por 4 regras e colocamos a inteligência artificial para vigiar o caixa todos os dias.",
+      "Resultado: **o caixa dobrou em 6 meses**, a equipe ficou mais enxuta e cada compra passou a ter um limite."
+    ],
+    "fotos": [
+      {
+        "arquivo": "",
+        "descricao": "Foto da fachada da loja hoje"
+      },
+      {
+        "arquivo": "",
+        "descricao": "Foto histórica — anos 1980"
+      },
+      {
+        "arquivo": "",
+        "descricao": "Foto do showroom e da equipe"
+      }
+    ],
+    "linhaDoTempo": [
+      {
+        "ano": "1981",
+        "texto": "[Nome do fundador] abre a Valadares em Porangatu."
+      },
+      {
+        "ano": "[ano]",
+        "texto": "A 2ª geração assume e a loja se especializa em acabamento."
+      },
+      {
+        "ano": "[ano]",
+        "texto": "A crise: pedido de recuperação judicial."
+      },
+      {
+        "ano": "2026",
+        "texto": "IA na gestão. Caixa dobra em 6 meses. Nasce o Caixa Blindado."
+      }
+    ]
+  },
+  "metodo": {
+    "etiqueta": "O método",
+    "titulo": "4 regras. Nenhuma exige planilha complicada.",
+    "subtitulo": "Nunca gaste mais do que o normal. Compre só o que vende. Cobre o que é seu. Guarde antes de gastar.",
+    "regras": [
+      {
+        "titulo": "Teto de gastos",
+        "texto": "Seu custo fixo normal vira limite. A IA avisa no dia em que o mês passar do ritmo."
+      },
+      {
+        "titulo": "Comprar só o que vende",
+        "texto": "Limite de compra do mês calculado pelo que sai da loja. Estoque parado vira campanha, não pedido novo."
+      },
+      {
+        "titulo": "Cobrança em dia",
+        "texto": "Quem cobrar primeiro, por valor e atraso. Cliente vencido não compra mais a prazo."
+      },
+      {
+        "titulo": "Reserva primeiro",
+        "texto": "Meta de 3 meses de custo fixo aplicados. O que sobra vai para a reserva antes de virar gasto."
+      }
+    ]
+  },
+  "ia": {
+    "etiqueta": "Como a IA entra",
+    "titulo": "Um controller financeiro que olha seu caixa todo dia. Sem contratar ninguém.",
+    "passos": [
+      {
+        "titulo": "Organize em 5 planilhas simples",
+        "texto": "Lançamentos, despesas fixas, cobrança, compras e saldos. No Google Planilhas, que você já sabe usar."
+      },
+      {
+        "titulo": "A IA confere e projeta",
+        "texto": "Fechamento diário em 2 minutos, projeção de caixa para 13 semanas e fechamento do mês com as regras aplicadas."
+      },
+      {
+        "titulo": "Você decide com 3 ações",
+        "texto": "Nada de relatório de 40 páginas. Cada revisão termina com as 3 decisões que mais protegem o caixa."
+      }
+    ],
+    "painel": {
+      "titulo": "Painel Caixa Blindado",
+      "aviso": "Exemplo ilustrativo",
+      "linhas": [
+        {
+          "rotulo": "Gasto do mês / teto",
+          "valor": "R$ 84 mil / R$ 92 mil",
+          "sinal": "verde"
+        },
+        {
+          "rotulo": "Compras do mês / limite",
+          "valor": "R$ 138 mil / R$ 130 mil",
+          "sinal": "laranja"
+        },
+        {
+          "rotulo": "Recebíveis acima de 60 dias",
+          "valor": "11%",
+          "sinal": ""
+        },
+        {
+          "rotulo": "Menor saldo em 13 semanas",
+          "valor": "semana de 20/10",
+          "sinal": ""
+        },
+        {
+          "rotulo": "Reserva aplicada",
+          "valor": "1,8 de 3 meses",
+          "sinal": ""
+        }
+      ],
+      "acoesTitulo": "3 ações desta semana",
+      "acoes": [
+        "Adiar o pedido do fornecedor B para a semana 43.",
+        "Ligar para os 5 maiores atrasos acima de 60 dias.",
+        "Lançar campanha de ponta de estoque de porcelanato."
+      ],
+      "rodape": "Funciona com Google Drive + Google Planilhas + Claude. Não precisa trocar de sistema."
+    }
+  },
+  "oferta": {
+    "etiqueta": "Comece pelo diagnóstico",
+    "titulo": "Descubra quanto dinheiro está parado na sua loja. De graça.",
+    "raioX": {
+      "titulo": "Raio-X do Estoque",
+      "selo": "Gratuito",
+      "enviaTitulo": "Você envia",
+      "envia": [
+        "Vendas por produto dos últimos 24 meses",
+        "Estoque atual com custo"
+      ],
+      "enviaNota": "Exportados do seu sistema, em Excel. Mostramos como.",
+      "recebeTitulo": "Você recebe em até 48h",
+      "recebe": [
+        "Quanto dinheiro está parado, item por item",
+        "Os produtos que não podem faltar",
+        "3 campanhas prontas para girar o estoque",
+        "Uma conversa de 20 minutos para explicar o resultado"
+      ],
+      "botao": "Quero meu Raio-X gratuito"
+    },
+    "plano": {
+      "etiqueta": "Depois do diagnóstico",
+      "titulo": "Caixa Blindado Anual",
+      "texto": "Implantação do método na sua loja e acompanhamento por 12 meses.",
+      "itens": [
+        "Onboarding individual nos primeiros 30 dias",
+        "Agente de Estoque e Agente Financeiro prontos",
+        "Modelos das 5 planilhas no seu Google Drive",
+        "Encontro semanal ao vivo em grupo",
+        "Comunidade fechada de lojistas"
+      ],
+      "preco": "12x R$ 500",
+      "precoNota": "Apresentado na conversa do diagnóstico"
+    }
+  },
+  "depoimentos": {
+    "etiqueta": "Quem já aplica",
+    "titulo": "Lojistas que blindaram o caixa",
+    "itens": [
+      {
+        "texto": "[Depoimento do lojista, com o número que mudou.]",
+        "nome": "[Nome]",
+        "loja": "[Loja · Cidade/UF]",
+        "foto": ""
+      },
+      {
+        "texto": "[Depoimento do lojista, com o número que mudou.]",
+        "nome": "[Nome]",
+        "loja": "[Loja · Cidade/UF]",
+        "foto": ""
+      },
+      {
+        "texto": "[Depoimento do lojista, com o número que mudou.]",
+        "nome": "[Nome]",
+        "loja": "[Loja · Cidade/UF]",
+        "foto": ""
+      }
+    ],
+    "midiaTitulo": "Na mídia e parceiros",
+    "midiaLogos": []
+  },
+  "sobre": {
+    "etiqueta": "Quem ensina",
+    "nome": "Heittor Lopes Valadares",
+    "foto": "",
+    "paragrafos": [
+      "Lojista, 3ª geração da Valadares. Não sou consultor que nunca abriu uma loja: aplico cada regra deste método no meu próprio caixa, todos os dias, antes de ensinar.",
+      "[Complementar: formação, empresas do grupo, experiência com varejo e agronegócio.]"
+    ],
+    "botao": "Falar comigo"
+  },
+  "formulario": {
+    "etiqueta": "Raio-X gratuito",
+    "titulo": "Peça seu diagnóstico",
+    "texto": "Preencha em 1 minuto. Em seguida, você fala comigo direto no WhatsApp.",
+    "nota": "Seus dados são usados apenas para o diagnóstico e não são compartilhados.",
+    "cargos": [
+      "Dono ou sócio",
+      "Gerente",
+      "Financeiro",
+      "Outro"
+    ],
+    "faturamentos": [
+      "Até R$ 100 mil",
+      "R$ 100 a 300 mil",
+      "R$ 300 mil a 1 milhão",
+      "Acima de R$ 1 milhão"
+    ],
+    "consentimento": "Autorizo o contato pelo WhatsApp e e-mail sobre o diagnóstico e o Método Caixa Blindado. Posso cancelar quando quiser.",
+    "botao": "Quero meu Raio-X gratuito",
+    "enviando": "Enviando…",
+    "erro": "Não conseguimos enviar agora. Tente de novo em instantes ou fale direto no WhatsApp."
+  },
+  "faq": {
+    "etiqueta": "Dúvidas",
+    "titulo": "Perguntas frequentes",
+    "itens": [
+      {
+        "pergunta": "Preciso trocar meu sistema?",
+        "resposta": "Não. O método usa relatórios que qualquer ERP exporta e planilhas no Google Drive."
+      },
+      {
+        "pergunta": "Não entendo nada de IA. Consigo usar?",
+        "resposta": "Sim. Você escreve \"fechamento de hoje\" e recebe o painel. A configuração é feita junto com você no onboarding."
+      },
+      {
+        "pergunta": "Serve para loja pequena?",
+        "resposta": "Serve. Quanto menor a loja, mais cada real parado pesa no caixa."
+      },
+      {
+        "pergunta": "Meus dados ficam seguros?",
+        "resposta": "As planilhas ficam no seu próprio Google Drive. Para o diagnóstico, usamos os relatórios só para a análise."
+      },
+      {
+        "pergunta": "O diagnóstico é gratuito mesmo?",
+        "resposta": "Sim. Se fizer sentido para você, apresentamos o plano anual na conversa. Se não, o Raio-X é seu."
+      }
+    ]
+  },
+  "chamadaFinal": {
+    "titulo": "Vender você já sabe. Agora faça sobrar."
+  },
+  "obrigado": {
+    "titulo": "Recebemos seu cadastro!",
+    "texto": "Abrindo o WhatsApp para você falar comigo…",
+    "botao": "Abrir o WhatsApp"
+  },
+  "rodape": {
+    "copyright": "© 2026 Método Caixa Blindado"
+  }
+}

@@ -1,0 +1,42 @@
+---
+import Shield from "./Shield.astro";
+import site from "../content/site.json";
+---
+<header class="header">
+  <div class="container header-in">
+    <a href="#topo" class="brand" aria-label="Método Caixa Blindado — início">
+      <Shield size={28} />
+      <span class="brand-txt">
+        <span class="brand-kicker">MÉTODO</span>
+        <span class="brand-name">Caixa Blindado</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      {site.menu.map((m) => <a href={m.link}>{m.texto}</a>)}
+    </nav>
+    <a href="#formulario" class="btn btn-gold header-cta">Diagnóstico gratuito</a>
+    <button type="button" class="menu-btn" id="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7 H20 M4 12 H20 M4 17 H20"></path></svg>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Menu">
+    {site.menu.map((m) => <a href={m.link}>{m.texto}</a>)}
+    <a href="#formulario">Diagnóstico gratuito</a>
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const nav = document.getElementById("mobile-nav");
+  btn?.addEventListener("click", () => {
+    const open = nav!.classList.toggle("open");
+    btn.setAttribute("aria-expanded", String(open));
+    btn.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+  });
+  nav?.addEventListener("click", (e) => {
+    if ((e.target as HTMLElement).tagName === "A") {
+      nav.classList.remove("open");
+      btn?.setAttribute("aria-expanded", "false");
+    }
+  });
+</script>

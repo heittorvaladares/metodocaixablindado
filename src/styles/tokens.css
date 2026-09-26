@@ -1,0 +1,30 @@
+/* Cores e fontes do site. Mude aqui para alterar o visual inteiro. */
+:root {
+  --ink: #15130F;
+  --ink-2: #1C1914;
+  --ink-3: #221E17;
+  --line-dark: #2E2921;
+  --line-dark-2: #3A342A;
+  --paper: #FBF8F2;
+  --sand: #F2EBDD;
+  --line-light: #E6DDCC;
+  --line-light-2: #CDBFA5;
+  --placeholder: #A8997F;
+  --white: #FFFFFF;
+  --gold: #C99A45;
+  --gold-text: #8A6424;
+  --text: #1C1914;
+  --text-2: #3F392F;
+  --muted: #5A5246;
+  --on-dark: #F6F1E7;
+  --muted-dark: #D9CFBE;
+  --muted-dark-2: #B9AE9C;
+  --ok: #5FA36B;
+  --warn: #D98B3A;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --radius: 14px;
+  --container: 1200px;
+}

@@ -1,0 +1,167 @@
+---
+import site from "../content/site.json";
+const f = site.formulario;
+---
+<section id="formulario" class="section paper">
+  <div class="container form-grid">
+    <div class="stack">
+      <p class="eyebrow">{f.etiqueta}</p>
+      <h2 class="h2">{f.titulo}</h2>
+      <p class="lead">{f.texto}</p>
+      <p class="muted" style="font-size:15px">{f.nota}</p>
+    </div>
+
+    <form class="form" id="lead-form" novalidate data-erro={f.erro} data-enviando={f.enviando}>
+      <div class="field">
+        <label for="nome">Seu nome</label>
+        <input id="nome" name="nome" type="text" autocomplete="name" required minlength="3" placeholder="Nome completo" />
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+      <div class="field">
+        <label for="whatsapp">WhatsApp</label>
+        <input id="whatsapp" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" required placeholder="(00) 00000-0000" />
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+      <div class="field">
+        <label for="loja">Nome da loja</label>
+        <input id="loja" name="loja" type="text" autocomplete="organization" required placeholder="Loja" />
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+      <div class="field">
+        <label for="cidade">Cidade / UF</label>
+        <input id="cidade" name="cidade" type="text" autocomplete="address-level2" required placeholder="Cidade - UF" />
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+      <div class="field">
+        <label for="cargo">Você é</label>
+        <select id="cargo" name="cargo" required>
+          <option value="">Selecione</option>
+          {f.cargos.map((c) => <option>{c}</option>)}
+        </select>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+      <div class="field">
+        <label for="faturamento">Faturamento mensal</label>
+        <select id="faturamento" name="faturamento" required>
+          <option value="">Selecione</option>
+          {f.faturamentos.map((c) => <option>{c}</option>)}
+        </select>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+      <div class="field full">
+        <label for="erp">Qual sistema (ERP) a loja usa? <span class="muted" style="font-weight:400">(opcional)</span></label>
+        <input id="erp" name="erp" type="text" placeholder="Nome do sistema" />
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="empresa_site">Não preencha</label>
+        <input id="empresa_site" name="empresa_site" type="text" tabindex="-1" autocomplete="off" />
+      </div>
+      <div class="full">
+        <div class="consent">
+          <input id="consentimento" name="consentimento" type="checkbox" required />
+          <label for="consentimento">{f.consentimento} <a href="/privacidade">Política de privacidade</a>.</label>
+        </div>
+        <span class="field-error" aria-live="polite" id="consent-error"></span>
+      </div>
+      <input type="hidden" name="consentimentoTexto" value={f.consentimento} />
+      <button type="submit" class="btn btn-ink btn-block full" id="lead-submit">{f.botao}</button>
+      <p class="form-status full" id="form-status" role="alert"></p>
+    </form>
+  </div>
+</section>
+
+<script>
+  const UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "fbclid"];
+
+  // Guarda as UTMs da primeira página visitada nesta sessão.
+  (() => {
+    try {
+      if (sessionStorage.getItem("cb_utm")) return;
+      const p = new URLSearchParams(location.search);
+      const utm: Record<string, string> = { landing: location.href };
+      UTM_KEYS.forEach((k) => { const v = p.get(k); if (v) utm[k] = v; });
+      sessionStorage.setItem("cb_utm", JSON.stringify(utm));
+    } catch {}
+  })();
+
+  const form = document.getElementById("lead-form") as HTMLFormElement;
+  const phone = document.getElementById("whatsapp") as HTMLInputElement;
+  const btn = document.getElementById("lead-submit") as HTMLButtonElement;
+  const status = document.getElementById("form-status")!;
+
+  function maskPhone(v: string) {
+    const d = v.replace(/\D/g, "").slice(0, 11);
+    if (d.length <= 2) return d ? `(${d}` : "";
+    if (d.length <= 6) return `(${d.slice(0, 2)}) ${d.slice(2)}`;
+    if (d.length <= 10) return `(${d.slice(0, 2)}) ${d.slice(2, 6)}-${d.slice(6)}`;
+    return `(${d.slice(0, 2)}) ${d.slice(2, 7)}-${d.slice(7)}`;
+  }
+  phone.addEventListener("input", () => { phone.value = maskPhone(phone.value); });
+
+  const messages: Record<string, string> = {
+    nome: "Informe seu nome.",
+    whatsapp: "Informe um WhatsApp válido, com DDD.",
+    loja: "Informe o nome da loja.",
+    cidade: "Informe a cidade e o estado.",
+    cargo: "Selecione uma opção.",
+    faturamento: "Selecione uma opção.",
+  };
+
+  function setError(el: HTMLInputElement | HTMLSelectElement, msg: string) {
+    el.setAttribute("aria-invalid", msg ? "true" : "false");
+    const span = el.parentElement?.querySelector(".field-error");
+    if (span) span.textContent = msg;
+  }
+
+  function validate(): boolean {
+    let ok = true;
+    let first: HTMLElement | null = null;
+    Object.keys(messages).forEach((name) => {
+      const el = form.elements.namedItem(name) as HTMLInputElement;
+      let bad = !el.value.trim();
+      if (name === "nome") bad = el.value.trim().length < 3;
+      if (name === "whatsapp") { const d = el.value.replace(/\D/g, ""); bad = d.length < 10 || d.length > 11; }
+      setError(el, bad ? messages[name] : "");
+      if (bad) { ok = false; first = first || el; }
+    });
+    const c = form.elements.namedItem("consentimento") as HTMLInputElement;
+    document.getElementById("consent-error")!.textContent = c.checked ? "" : "Marque a autorização para podermos entrar em contato.";
+    if (!c.checked) { ok = false; first = first || c; }
+    (first as HTMLElement | null)?.focus();
+    return ok;
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    status.textContent = "";
+    if (!validate()) return;
+
+    const data: Record<string, any> = Object.fromEntries(new FormData(form).entries());
+    data.consentimento = true;
+    try { Object.assign(data, JSON.parse(sessionStorage.getItem("cb_utm") || "{}")); } catch {}
+    data.eventId = (crypto as any).randomUUID ? crypto.randomUUID() : String(Date.now());
+
+    const label = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = form.dataset.enviando || "Enviando…";
+    try {
+      const res = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      sessionStorage.setItem("cb_lead", JSON.stringify({
+        nome: String(data.nome).trim().split(" ")[0],
+        loja: String(data.loja).trim(),
+        cidade: String(data.cidade).trim(),
+        eventId: data.eventId,
+      }));
+      location.href = "/obrigado";
+    } catch {
+      status.textContent = form.dataset.erro || "Não conseguimos enviar agora.";
+      btn.disabled = false;
+      btn.textContent = label;
+    }
+  });
+</script>

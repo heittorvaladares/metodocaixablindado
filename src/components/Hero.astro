@@ -1,0 +1,49 @@
+---
+import site from "../content/site.json";
+import { rich, youtubeId } from "../lib/util";
+const h = site.hero;
+const yt = youtubeId(h.videoUrl);
+---
+<section id="topo" class="dark">
+  <div class="container hero">
+    <div class="hero-grid">
+      <div class="stack">
+        <p class="eyebrow">{h.etiqueta}</p>
+        <h1>{h.titulo}</h1>
+        <p class="sub" set:html={rich(h.subtitulo)} />
+        <div class="stack hero-ctas" style="gap:12px">
+          <a href="#formulario" class="btn btn-gold btn-block">{site.botaoPrincipal}</a>
+        </div>
+        <p class="hero-note">{h.nota}</p>
+      </div>
+      <div>
+        {yt ? (
+          <button type="button" class="video has-video" id="video" data-yt={yt} aria-label="Assistir ao vídeo de apresentação">
+            <img class="video-thumb" src={`https://i.ytimg.com/vi/${yt}/hqdefault.jpg`} alt="" loading="lazy" />
+            <span class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="#15130F" aria-hidden="true"><path d="M8 5 L19 12 L8 19 Z"></path></svg></span>
+          </button>
+        ) : (
+          <div class="video" role="img" aria-label="Espaço para o vídeo de apresentação">
+            <span class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="#15130F" aria-hidden="true"><path d="M8 5 L19 12 L8 19 Z"></path></svg></span>
+            <span class="video-label">[Vídeo de apresentação]</span>
+          </div>
+        )}
+        <p class="video-caption">{h.videoLegenda}</p>
+      </div>
+    </div>
+    <div class="proof">
+      {h.numeros.map((n) => (
+        <div><span class="proof-v">{n.valor}</span><span class="proof-t">{n.texto}</span></div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const v = document.getElementById("video");
+  v?.addEventListener("click", () => {
+    const id = v.dataset.yt;
+    v.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" title="Vídeo de apresentação" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+    (window as any).cbTrack?.("ViewContent", "video_play", { content_name: "video_apresentacao" });
+  }, { once: true });
+</script>

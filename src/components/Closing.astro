@@ -1,0 +1,48 @@
+---
+// Perguntas frequentes, chamada final, rodapé e botão fixo do celular.
+import site from "../content/site.json";
+import Shield from "./Shield.astro";
+import Footer from "./Footer.astro";
+const { faq, chamadaFinal, botaoPrincipal } = site;
+---
+<section id="duvidas" class="section sand">
+  <div class="container faq-grid">
+    <div class="stack" style="gap:14px;margin-bottom:12px">
+      <p class="eyebrow">{faq.etiqueta}</p>
+      <h2 class="h2">{faq.titulo}</h2>
+    </div>
+    <div class="faq">
+      {faq.itens.map((q, i) => (
+        <details open={i === 0}>
+          <summary><h3>{q.pergunta}</h3></summary>
+          <p>{q.resposta}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="container final">
+    <Shield size={48} />
+    <h2>{chamadaFinal.titulo}</h2>
+    <a href="#formulario" class="btn btn-gold btn-block">{botaoPrincipal}</a>
+    <Footer />
+  </div>
+</section>
+
+<div class="sticky-cta" id="sticky-cta">
+  <a href="#formulario" class="btn btn-gold btn-block">Diagnóstico gratuito</a>
+</div>
+
+<script>
+  document.body.classList.add("has-sticky");
+  const bar = document.getElementById("sticky-cta")!;
+  const targets = ["formulario", "topo"].map((id) => document.getElementById(id)).filter(Boolean) as HTMLElement[];
+  const visible = new Set<string>();
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { e.isIntersecting ? visible.add(e.target.id) : visible.delete(e.target.id); });
+    bar.classList.toggle("hide", visible.size > 0);
+  }, { threshold: 0.15 });
+  targets.forEach((t) => io.observe(t));
+</script>

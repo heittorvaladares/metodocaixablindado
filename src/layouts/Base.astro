@@ -1,0 +1,91 @@
+---
+import "@fontsource/fraunces/latin-400.css";
+import "@fontsource/fraunces/latin-600.css";
+import "@fontsource/fraunces/latin-700.css";
+import "@fontsource/manrope/latin-400.css";
+import "@fontsource/manrope/latin-500.css";
+import "@fontsource/manrope/latin-600.css";
+import "@fontsource/manrope/latin-700.css";
+import "../styles/global.css";
+import site from "../content/site.json";
+
+interface Props { title?: string; description?: string; noindex?: boolean }
+const { title = site.seo.titulo, description = site.seo.descricao, noindex = false } = Astro.props;
+
+const pixelId = import.meta.env.PUBLIC_META_PIXEL_ID || "";
+const ga4Id = import.meta.env.PUBLIC_GA4_ID || "";
+const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://metodocaixablindado.com.br");
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  {noindex && <meta name="robots" content="noindex" />}
+  <meta name="theme-color" content="#15130F" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={new URL("/og.png", canonical)} />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+  <slot />
+
+  <!-- Aviso de cookies: Pixel e Analytics só carregam depois do aceite. -->
+  <div class="cookie" id="cookie" hidden>
+    <p>Usamos cookies para medir o desempenho do site e dos anúncios. Você pode aceitar ou recusar. Veja a <a href="/privacidade">política de privacidade</a>.</p>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-ghost" data-cookie="no">Recusar</button>
+      <button type="button" class="btn btn-ink" data-cookie="yes">Aceitar</button>
+    </div>
+  </div>
+
+  <script is:inline define:vars={{ pixelId, ga4Id }}>
+    (function () {
+      var KEY = "cb_consent";
+      var box = document.getElementById("cookie");
+      function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+      function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+      window.cbTrack = function () {};
+      function load() {
+        if (pixelId) {
+          !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");
+          fbq("init", pixelId); fbq("track", "PageView");
+        }
+        if (ga4Id) {
+          var g = document.createElement("script"); g.async = true;
+          g.src = "https://www.googletagmanager.com/gtag/js?id=" + ga4Id; document.head.appendChild(g);
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function () { dataLayer.push(arguments); };
+          gtag("js", new Date()); gtag("config", ga4Id);
+        }
+        // cbTrack(nomeMeta, nomeGA, dados, eventId)
+        window.cbTrack = function (meta, ga, data, eventId) {
+          if (window.fbq && meta) fbq("track", meta, data || {}, eventId ? { eventID: eventId } : undefined);
+          if (window.gtag && ga) gtag("event", ga, data || {});
+        };
+        document.dispatchEvent(new Event("cb:tracking-ready"));
+      }
+
+      var c = get();
+      if (c === "yes") load();
+      else if (c !== "no" && (pixelId || ga4Id)) box.hidden = false;
+
+      box.addEventListener("click", function (e) {
+        var v = e.target && e.target.getAttribute("data-cookie");
+        if (!v) return;
+        set(v); box.hidden = true;
+        if (v === "yes") load();
+      });
+    })();
+  </script>
+</body>
+</html>

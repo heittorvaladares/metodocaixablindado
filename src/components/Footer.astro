@@ -1,0 +1,12 @@
+---
+import site from "../content/site.json";
+const { contato, rodape } = site;
+---
+<footer class="footer">
+  <span>{rodape.copyright} · metodocaixablindado.com.br</span>
+  <span class="footer-links">
+    <a href="/privacidade">Política de privacidade</a>
+    {contato.instagram && <a href={contato.instagram} target="_blank" rel="noopener">Instagram</a>}
+    <a href={`https://wa.me/${contato.whatsapp}`} target="_blank" rel="noopener">WhatsApp</a>
+  </span>
+</footer>
