@@ -1,10 +1,10 @@
 {
   "seo": {
     "titulo": "Método Caixa Blindado | Faça sobrar dinheiro na sua loja de materiais de construção",
-    "descricao": "O método que dobrou o caixa de uma loja de 45 anos em 6 meses. 4 regras simples, suas planilhas e a IA vigiando cada real. Peça seu Raio-X de Estoque gratuito."
+    "descricao": "O método que triplicou o caixa de uma loja de 45 anos: estoque menor, compra só do que gira e a IA decidindo o que repor. Peça seu Raio-X de Estoque gratuito."
   },
   "contato": {
-    "whatsapp": "5562999999999",
+    "whatsapp": "13092085805",
     "mensagemWhatsapp": "Olá, Heittor! Sou {nome}, da {loja} ({cidade}). Acabei de me cadastrar para o Raio-X de Estoque gratuito.",
     "instagram": "",
     "email": ""
@@ -13,7 +13,7 @@
     "mostrarDores": true,
     "mostrarPainelExemplo": true,
     "mostrarDepoimentos": false,
-    "mostrarPreco": true
+    "mostrarPreco": false
   },
   "menu": [
     {
@@ -37,10 +37,10 @@
   "hero": {
     "etiqueta": "Para donos de lojas de materiais de construção",
     "titulo": "Sua loja vende. Mas sobra dinheiro no fim do mês?",
-    "subtitulo": "O método que usamos numa loja de 45 anos, depois de uma recuperação judicial, para **dobrar o caixa em 6 meses**: 4 regras simples, suas planilhas de sempre e a inteligência artificial vigiando cada real.",
+    "subtitulo": "O método que usamos numa loja de 45 anos, depois de uma recuperação judicial, para **triplicar o caixa**: estoque menor, compra só do que gira e a inteligência artificial decidindo o que repor, pelo histórico de vendas.",
     "nota": "Você envia 2 relatórios do seu sistema. Em até 48h, recebe quanto dinheiro está parado na sua loja.",
     "videoUrl": "",
-    "videoLegenda": "Heittor Lopes Valadares · 3ª geração da Valadares, desde 1981",
+    "videoLegenda": "Heittor Valadares · 3ª geração da Valadares, desde 1981",
     "numeros": [
       {
         "valor": "45 anos",
@@ -51,8 +51,8 @@
         "texto": "da família no balcão"
       },
       {
-        "valor": "2x o caixa",
-        "texto": "em 6 meses"
+        "valor": "3x o caixa",
+        "texto": "com IA nas compras"
       },
       {
         "valor": "[−X%]",
@@ -92,9 +92,9 @@
     "etiqueta": "A história",
     "titulo": "45 anos no mesmo endereço. Uma crise que quase fechou as portas.",
     "paragrafos": [
-      "A Valadares abriu em 1981 em Porangatu, Goiás. Três gerações da família atrás do mesmo balcão, vendendo acabamento para quem constrói a região.",
+      "A Valadares nasceu em 1981 em Porangatu, Goiás. Eronildo Valadares, que começou a vida vendendo pão, engraxando sapato e trabalhando em oficina, abriu a loja ao lado do pai, Antônio Rodrigues Valadares, e do irmão, Oneildo Lopes Valadares. Três gerações depois, a família segue atrás do mesmo balcão, vendendo para quem constrói a região.",
       "Passamos por uma recuperação judicial. Foi ali que entendemos: o problema não era vender. Era não enxergar para onde o dinheiro ia. Trocamos o \"achismo\" por 4 regras e colocamos a inteligência artificial para vigiar o caixa todos os dias.",
-      "Resultado: **o caixa dobrou em 6 meses**, a equipe ficou mais enxuta e cada compra passou a ter um limite."
+      "Resultado: **triplicamos o caixa**. Reduzimos o estoque, passamos a comprar mais do que gira e a estocar menos do que gira pouco. Hoje a IA decide o que devemos ou não comprar, de acordo com o histórico de vendas e a necessidade de reposição."
     ],
     "fotos": [
       {
@@ -102,8 +102,8 @@
         "descricao": "Foto da fachada da loja hoje"
       },
       {
-        "arquivo": "",
-        "descricao": "Foto histórica — anos 1980"
+        "arquivo": "fachada-irmaos-valadares.webp",
+        "descricao": "Fachada antiga da loja, ainda como Irmãos Valadares"
       },
       {
         "arquivo": "",
@@ -113,11 +113,11 @@
     "linhaDoTempo": [
       {
         "ano": "1981",
-        "texto": "[Nome do fundador] abre a Valadares em Porangatu."
+        "texto": "Eronildo Valadares, o pai Antônio e o irmão Oneildo abrem a Valadares em Porangatu."
       },
       {
-        "ano": "[ano]",
-        "texto": "A 2ª geração assume e a loja se especializa em acabamento."
+        "ano": "1993",
+        "texto": "Eronildo assume a presidência da Associação Comercial de Porangatu (ACIAP)."
       },
       {
         "ano": "[ano]",
@@ -125,7 +125,7 @@
       },
       {
         "ano": "2026",
-        "texto": "IA na gestão. Caixa dobra em 6 meses. Nasce o Caixa Blindado."
+        "texto": "A IA passa a decidir as compras. O caixa triplica. Nasce o Caixa Blindado."
       }
     ]
   },
@@ -231,14 +231,14 @@
     },
     "plano": {
       "etiqueta": "Depois do diagnóstico",
-      "titulo": "Caixa Blindado Anual",
-      "texto": "Implantação do método na sua loja e acompanhamento por 12 meses.",
+      "titulo": "IA operando no seu negócio",
+      "texto": "Mostramos como colocar a inteligência artificial para trabalhar na loja que você já tem, do jeito que fazemos na Valadares. Sem trocar de sistema.",
       "itens": [
-        "Onboarding individual nos primeiros 30 dias",
-        "Agente de Estoque e Agente Financeiro prontos",
-        "Modelos das 5 planilhas no seu Google Drive",
-        "Encontro semanal ao vivo em grupo",
-        "Comunidade fechada de lojistas"
+        "Estoque menor e menos dinheiro parado na prateleira",
+        "Compra mais do que gira, estoque mínimo do que gira pouco",
+        "A IA diz o que comprar e o que não comprar, pelo histórico de vendas",
+        "Reposição calculada pela necessidade real de cada produto",
+        "Na Valadares, foi assim que triplicamos o caixa"
       ],
       "preco": "12x R$ 500",
       "precoNota": "Apresentado na conversa do diagnóstico"
@@ -272,11 +272,11 @@
   },
   "sobre": {
     "etiqueta": "Quem ensina",
-    "nome": "Heittor Lopes Valadares",
+    "nome": "Heittor Valadares",
     "foto": "",
     "paragrafos": [
       "Lojista, 3ª geração da Valadares. Não sou consultor que nunca abriu uma loja: aplico cada regra deste método no meu próprio caixa, todos os dias, antes de ensinar.",
-      "[Complementar: formação, empresas do grupo, experiência com varejo e agronegócio.]"
+      "Filho de Eronildo Valadares, cresci dentro da loja da família. Além do varejo, atuo no agronegócio do Grupo Valadares."
     ],
     "botao": "Falar comigo"
   },
@@ -312,7 +312,7 @@
       },
       {
         "pergunta": "Não entendo nada de IA. Consigo usar?",
-        "resposta": "Sim. Você escreve \"fechamento de hoje\" e recebe o painel. A configuração é feita junto com você no onboarding."
+        "resposta": "Sim. Você escreve \"fechamento de hoje\" e recebe o painel. A configuração é feita junto com você."
       },
       {
         "pergunta": "Serve para loja pequena?",
@@ -324,7 +324,7 @@
       },
       {
         "pergunta": "O diagnóstico é gratuito mesmo?",
-        "resposta": "Sim. Se fizer sentido para você, apresentamos o plano anual na conversa. Se não, o Raio-X é seu."
+        "resposta": "Sim. Na conversa, mostramos como a IA pode operar no seu negócio. Se fizer sentido, seguimos juntos. Se não, o Raio-X é seu."
       }
     ]
   },
@@ -337,6 +337,6 @@
     "botao": "Abrir o WhatsApp"
   },
   "rodape": {
-    "copyright": "© 2026 Método Caixa Blindado"
+    "copyright": "© 2026 Método Caixa Blindado · MLV Serviços Administrativos Ltda · CNPJ 61.862.214/0001-61"
   }
 }
