@@ -110,9 +110,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 /* História */
 .valadares-logo { width: 180px; height: auto; }
 .hist-grid { display: grid; gap: 24px; }
-.hist-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.hist-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; align-content: start; }
 .hist-photos > :first-child { grid-column: span 2; aspect-ratio: 16 / 9; }
 .hist-photos > * { aspect-ratio: 1 / 1; border-radius: 12px; object-fit: cover; width: 100%; }
+.hist-photos > :nth-child(2):last-child { grid-column: span 2; aspect-ratio: 16 / 9; }
 .timeline { display: flex; flex-direction: column; border-left: 2px solid var(--line-light-2); padding-left: 18px; margin-top: 8px; }
 .timeline-item { padding: 10px 0; display: flex; flex-direction: column; gap: 2px; }
 .timeline-year { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--gold-text); }
