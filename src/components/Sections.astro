@@ -177,8 +177,9 @@ const pad = (n: number) => String(n + 1).padStart(2, "0");
       <p class="eyebrow">{imprensa.etiqueta}</p>
       <h2 class="h2">{imprensa.titulo}</h2>
       <p class="lead">{imprensa.subtitulo}</p>
+      <p class="press-hint">Deslize para o lado para ver todas →</p>
     </div>
-    <div class="cards">
+    <div class="cards press-cards">
       {imprensa.itens.map((m) => (
         <a class="card press" href={m.link} target="_blank" rel="noopener" aria-label={`${imprensa.botao}: ${m.veiculo}, ${m.titulo}`}>
           <span class="press-outlet">{m.veiculo}</span>

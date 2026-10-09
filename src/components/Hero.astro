@@ -3,6 +3,8 @@ import site from "../content/site.json";
 import { rich, youtubeId } from "../lib/util";
 const h = site.hero;
 const yt = youtubeId(h.videoUrl);
+// Shorts e vídeos gravados no celular ficam na vertical (9:16).
+const vertical = h.videoUrl.includes("/shorts/");
 ---
 <section id="topo" class="dark">
   <div class="container hero">
@@ -18,7 +20,7 @@ const yt = youtubeId(h.videoUrl);
       </div>
       <div>
         {yt ? (
-          <button type="button" class="video has-video" id="video" data-yt={yt} aria-label="Assistir ao vídeo de apresentação">
+          <button type="button" class:list={["video has-video", { "video-vertical": vertical }]} id="video" data-yt={yt} aria-label="Assistir ao vídeo de apresentação">
             <img class="video-thumb" src={`https://i.ytimg.com/vi/${yt}/hqdefault.jpg`} alt="" loading="lazy" />
             <span class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="#15130F" aria-hidden="true"><path d="M8 5 L19 12 L8 19 Z"></path></svg></span>
           </button>
@@ -43,7 +45,7 @@ const yt = youtubeId(h.videoUrl);
   const v = document.getElementById("video");
   v?.addEventListener("click", () => {
     const id = v.dataset.yt;
-    v.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" title="Vídeo de apresentação" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+    v.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1" title="Vídeo de apresentação" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
     (window as any).cbTrack?.("ViewContent", "video_play", { content_name: "video_apresentacao" });
   }, { once: true });
 </script>
